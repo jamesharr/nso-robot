@@ -15,5 +15,5 @@ docker run -t --rm \
         --volume ${PWD}/robot:/robot \
         --volume ${PWD}/robot-logs:/robot-logs \
         jamesharr/nso-robot:latest \
-        robot -d /robot-logs /robot
+        robot --outputdir /robot-logs /robot
 ```

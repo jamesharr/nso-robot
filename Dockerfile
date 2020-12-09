@@ -2,7 +2,6 @@ ARG PYTHON_VERSION=3.9
 FROM python:$PYTHON_VERSION-slim-buster
 
 LABEL description="Robot Framework runner in Python3"
-#ARG ENV_VAR
 
 RUN pip3 install --no-cache-dir --upgrade pip \
   && pip3 install --no-cache-dir \
@@ -10,7 +9,5 @@ RUN pip3 install --no-cache-dir --upgrade pip \
     robotframework-jsonlibrary \
     robotframework-requests
 
-ENTRYPOINT ["python3", "-m", "robot.run"]
-#SHELL ["/bin/sh", "-lc"]
-#CMD [ "robot", "-d", "/robot-logs", "/robot" ]
+SHELL ["/bin/sh", "-lc"]
 
