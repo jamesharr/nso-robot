@@ -10,4 +10,4 @@ RUN pip3 install --no-cache-dir --upgrade pip \
     robotframework-requests
 
 SHELL ["/bin/sh", "-lc"]
-ENTRYPOINT ["python3", "-m", "robot.run"]
+#ENTRYPOINT ["python3", "-m", "robot.run"]
