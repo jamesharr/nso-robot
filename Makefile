@@ -40,6 +40,9 @@ run:
 		$(ROBOT_CT) \
 		robot -d /robot-logs /robot
 
+.PHONY: push
+push:
+	docker push $(ROBOT_CT)
+
 .PHONY: clean
 clean:
-	rm -fr venv
